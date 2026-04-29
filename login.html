@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ログイン画面</title>
+</head>
+<body>
+
+<h1>ログイン</h1>
+
+<input type="text" id="email" placeholder="メールアドレス"><br><br>
+
+<input type="password" id="password" placeholder="パスワード"><br><br>
+
+<button onclick="login()">ログイン</button>
+
+<p id="result"></p>
+
+<script>
+function login() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(email == "test@test.com" && password == "1234"){
+        document.getElementById("result").innerText = "ログイン成功";
+    } else {
+        document.getElementById("result").innerText = "ログイン失敗";
+    }
+}
+</script>
+
+</body>
+</html>
